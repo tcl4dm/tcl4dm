@@ -144,4 +144,5 @@ For example, If you were implementing the if command, you would have it send the
 
 # Reporting Bugs
 Report any found bugs at singulo.io, the official forums for TCL4DM.
+
 --More to come--
