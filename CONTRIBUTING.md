@@ -142,5 +142,6 @@ This prevents nesting levels from getting deeper then they need to be.
 ###When adding new tcl commands, attempt to have it reuse any already existing tcl command in its internals.
 For example, If you were implementing the if command, you would have it send the conditional expression to the expr tcl command, rather then try code the code to evaluate it yourself or sending it to the same internal proc that expr uses.
 
-
+# Reporting Bugs
+Report any found bugs at singulo.io, the official forums for TCL4DM.
 --More to come--
