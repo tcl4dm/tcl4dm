@@ -9,7 +9,7 @@ Issue reports that start out by rudely throwing blame around are subject to clos
 State what the issue is from a "whats wrong" prospective.
 Bug reports should clearly allow maintainers to understand whats wrong and how to test/reproduce.
 
-##PRs
+##PRsa
 
 ###Hide something, get rejected.
 Your PR should clearly state what it does. Adding unrelated things then never mentioning them will not fool us. In the rare circumstance it does, your PR may still be reverted wholesale once we notice and you will be required to resubmit it without the related thing.
