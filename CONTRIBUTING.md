@@ -1,46 +1,46 @@
-#Contributing Guidelines
+# Contributing Guidelines
 
-##Issues
+## Issues
 
-###Be at the least, mildly civil
+### Be at the least, mildly civil
 Issue reports that start out by rudely throwing blame around are subject to closure.
 
-###Be clear and concise.
+### Be clear and concise.
 State what the issue is from a "whats wrong" prospective.
 Bug reports should clearly allow maintainers to understand whats wrong and how to test/reproduce.
 
-##PRs
+## PRs
 
-###Hide something, get rejected.
+###H ide something, get rejected.
 Your PR should clearly state what it does. Adding unrelated things then never mentioning them will not fool us. In the rare circumstance it does, your PR may still be reverted wholesale once we notice and you will be required to resubmit it without the related thing.
 Breaking this rule too many times will lead to a block.
 Breaking this rule to attempt to add something that compromises the security of this application will lead to a block and report to github and/or the proper authorities.
 
-###Test it, or risk closure.
+### Test it, or risk closure.
 PRs with obvious bugs that indicate the user never tested them will be closed unless marked as not yet tested in the body of the PR.
 
-##Style and Code Requirements
+## Style and Code Requirements
 
-###Tabs not spaces
+###T abs not spaces
 And 1 block level equals 1 tab, no more, no less.
 (You may use spaces to align something if you insist, but you must tab to the block level first)
 
-###No duplicated code.
+### No duplicated code.
 Genericize it into a proc that can be called from multiple places
 
 This makes it easier to change it later, since you have one central place.
 
-###No overriding byond type safety checks.
+### No overriding byond type safety checks.
 The use of the : operator to override type safety checks is strongly discouraged.
 Exceptions are only made when used in loops that require the performance boast.
 
-###Type paths must began with a /
+### Type paths must began with a /
 eg: `/datum/thing` not `datum/thing`
 
-###Datum type paths must began with "datum"
+### Datum type paths must began with "datum"
 In byond this is optional, but omitting it makes finding object definitions harder.
 
-###All Byond paths must contain the full path.
+### All Byond paths must contain the full path.
 (ie: absolute pathing)
 
 Byond will allow you nest almost any type keyword into a block, such as:
@@ -94,7 +94,7 @@ The previous code made complaint:
 	code
 ````
 
-###Operators and spaces:
+### Operators and spaces:
 * Operators that should be separated by spaces
 	* Boolean and logic operators like &&, || <, >, ==, etc (but not !)
 	* Argument separator operators like , (and ; when used in a forloop)
@@ -107,7 +107,7 @@ The previous code made complaint:
 	* logical not !
 (this is not strictly enforced, but more a guideline for readability's sake)
 	
-###Control statements:
+### Control statements:
 (if,while,for,etc)
 
 * All control statements must have a space before the expression (eg: `if (blah)` not `if(blah)`)
@@ -116,7 +116,7 @@ The previous code made complaint:
 * for loops should use ; not , to separate expressions (eg: `for (var/i=1; i < 10; i++)` not `for (var/i=1,i < 10,i++)`)
 * All control statements comparing a variable to a number should use the formula of `thing` `operator` `number`, not the reverse (eg: `if (count <= 10)` not `if (10 >= count)`)
 
-###Use early return.
+### Use early return.
 Do not enclose a proc in an if block when returning on a condition is feasible
 This is bad:
 ````
@@ -139,7 +139,7 @@ This is good:
 ````
 This prevents nesting levels from getting deeper then they need to be.
 
-###When adding new tcl commands, attempt to have it reuse any already existing tcl command in its internals.
+### When adding new tcl commands, attempt to have it reuse any already existing tcl command in its internals.
 For example, If you were implementing the if command, you would have it send the conditional expression to the expr tcl command, rather then try code the code to evaluate it yourself or sending it to the same internal proc that expr uses.
 
 
